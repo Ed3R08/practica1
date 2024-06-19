@@ -1,20 +1,22 @@
 package com.mycompany.practica1;
-
+//importo la libreria Date para un futuro uso en la entrega y devolucion de libros
 import java.util.Date;
 
+//Creo la clase prestamo que implementa nuevamente mostrarInfo() de la interface ImprimirInfo
 public class Prestamo implements ImprimirInfo{
     private Libro libro;
     private Usuario usuario;
     private String fechaPrestamo;
     private String fechaDevolucion;
 
+    //Constructor de la clase prestamo
     public Prestamo(Libro libro, Usuario usuario, String fechaPrestamo, String fechaDevolucion) {
         this.libro = libro;
         this.usuario = usuario;
         this.fechaPrestamo = fechaPrestamo;
         this.fechaDevolucion = fechaDevolucion;
     }
-
+    //getters and setters generados automaticamente
     public Libro getLibro() {
         return libro;
     }
@@ -47,6 +49,7 @@ public class Prestamo implements ImprimirInfo{
         this.fechaDevolucion = fechaDevolucion;
     }
 
+    //nuevamente utilizo el metodo sobreescrito mostrarInfo()
     @Override
     public void mostrarInfo(){
         

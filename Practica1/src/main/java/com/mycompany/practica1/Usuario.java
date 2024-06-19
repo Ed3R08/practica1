@@ -1,10 +1,11 @@
 package com.mycompany.practica1;
-
+//Creacion de la clase usuario que hereda de persona e implementa de ImprimirInfo
 public class Usuario extends Persona implements ImprimirInfo {
     private String direccion;
     private String telefono;
     private int cedula;
 
+    //Creamos el constructor 
     public Usuario(String nombre, String apellido, String direccion, String telefono,int cedula) {
         super(nombre, apellido);
         this.direccion = direccion;
@@ -12,6 +13,7 @@ public class Usuario extends Persona implements ImprimirInfo {
         this.cedula = cedula;
     }
 
+    // getters and setters generados automaticamente
     public String getDireccion() {
         return direccion;
     }
@@ -36,6 +38,7 @@ public class Usuario extends Persona implements ImprimirInfo {
         this.cedula = cedula;
     }
     
+    //utilizamos el metodo sobreescrito mostrarInfo()
     @Override
      public void mostrarInfo(){
         System.out.println("Nombre: "+getNombre());
